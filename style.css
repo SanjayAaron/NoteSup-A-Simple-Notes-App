@@ -5,7 +5,7 @@
 body{
      font-family: "TASA Explorer", sans-serif;
       font-optical-sizing: auto;
-      background-color: rgb(31, 44, 44);
+      background-color: rgb(231, 174, 209);
 }
 .titlebar{
     padding: 10px;
@@ -128,4 +128,5 @@ body{
 .popup-box textarea:focus{
     outline: none;
     
+
 }
