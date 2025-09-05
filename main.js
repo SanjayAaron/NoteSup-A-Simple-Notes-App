@@ -19,10 +19,10 @@ cancelbutton.addEventListener("click", function(){
 container=document.querySelector(".container")
 addbook=document.getElementById("add-book")
 booktitleinput=document.getElementById("book-title-input")
-booktitleinput=document.getElementById("book-topic-input")
+booktopicinput=document.getElementById("book-topic-input")
 booknoteinput=document.getElementById("book-note-input")
 
-book.addEventListener("click", function(event){
+addbook.addEventListener("click", function(event){
    event.preventDefault()
    var div=document.createElement("div")
    div.setAttribute("class","book-container")
@@ -30,8 +30,12 @@ book.addEventListener("click", function(event){
     <h2>${booktitleinput.value}</h2>
     <h3>${booktopicinput.value}</h3>
     <p>${booknoteinput.value}</p>
-    <button>Delete</button>`
-   container.append(div)
-   popupoverlay.style.display="none";
-   popupbox.style.display="none";
+    <button class="delete-button" id="delete">Delete</button>`
+    container.append(div)
+    popupoverlay.style.display="none";
+    popupbox.style.display="none";
+    deletebutton=document.getElementById("delete");
+    deletebutton.addEventListener("click", (event)=>{
+       event.target.parentNode.remove()
+    });
 })
